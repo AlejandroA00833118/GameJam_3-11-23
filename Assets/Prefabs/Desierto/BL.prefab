@@ -2330,7 +2330,6 @@ GameObject:
   m_Component:
   - component: {fileID: 779693676705004905}
   - component: {fileID: 1352242489294626475}
-  - component: {fileID: -6780126510214625014}
   m_Layer: 0
   m_Name: BL
   m_TagString: Untagged
@@ -2368,25 +2367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e832307cf7f4946ba1ef458d22a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-6780126510214625014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7138868821465254527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd53e31ecf091ad4c992d439c1110ab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  props:
-  - {fileID: 804397042214645151, guid: beb0614d42ea45148988b4b393a07b17, type: 3}
-  - {fileID: 804397042214645151, guid: 6d8336cea87a59043ac1dc7ce8923f95, type: 3}
-  - {fileID: 3590611383400883185, guid: b2c285c35f9b4f340ade2427d04f0a35, type: 3}
-  - {fileID: 5156492061372920528, guid: 63d4dae621d29cf45b6321bb70a0e281, type: 3}
-  propsMaxItems: 20
-  waitTime: 4
 --- !u!1 &7220756092136881668
 GameObject:
   m_ObjectHideFlags: 0
