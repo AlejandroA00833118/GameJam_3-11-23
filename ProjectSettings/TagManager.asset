@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,10 +13,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Enemies
+  - Enemy_Bullets
+  - Player
+  - Player_Bullets
   - 
   - 
   - 
@@ -40,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Pick-ups
+    uniqueID: 441620813
+    locked: 0
+  - name: Guns
+    uniqueID: 2235358735
+    locked: 0
+  - name: Player
+    uniqueID: 3162244523
+    locked: 0
+  - name: Props
+    uniqueID: 1772268339
+    locked: 0
+  - name: Map_Front
+    uniqueID: 4002209767
+    locked: 0
+  - name: HUD
+    uniqueID: 2569051551
     locked: 0
