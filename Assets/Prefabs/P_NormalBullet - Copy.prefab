@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1076130224973639719}
   - component: {fileID: 3141787303283850350}
   m_Layer: 0
-  m_Name: P_NormalBullet
+  m_Name: P_NormalBullet - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
