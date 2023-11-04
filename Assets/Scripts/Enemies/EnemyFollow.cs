@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField] private float minimumDistance;
     [SerializeField] private Animator enemyAnimator;
 
+    [SerializeField] private Transform gunEndPointTransform;
     [SerializeField] private GameObject projectile;
     [SerializeField] private float timeBetweenShots;
     private float nextShotTime;
@@ -20,7 +21,7 @@ public class EnemyFollow : MonoBehaviour
     private void Update()
     {
         if(Time.time > nextShotTime){
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
             nextShotTime = Time.time + timeBetweenShots;
         }
         

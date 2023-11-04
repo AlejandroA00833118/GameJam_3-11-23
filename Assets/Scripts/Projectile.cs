@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Vector3 targetPosition;
-    public float speed;
+    [SerializeField] private Transform aimTransform;
 
-    private void Start(){
-        targetPosition = GameObject.FindWithTag("Player").transform.position;
+    public float fuerza = 10.0f;
+    Rigidbody2D rb;
+
+    void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        Vector2 direccion = aimTransform.right;
+        rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
     }
 
-    private void Update()
+    void OnBecameInvisible()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.fixedDeltaTime);
-
-        if(transform.position == targetPosition){
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
