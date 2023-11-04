@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 645528013679260772}
   - component: {fileID: 3789163908575220500}
   - component: {fileID: 1034819363972427109}
+  - component: {fileID: 6891202654040139934}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -708,6 +709,7 @@ MonoBehaviour:
   projectile: {fileID: 385594097134617945, guid: 8778dfe2f07cc5b45a80fdb3fd7ab8ba, type: 3}
   gunEndPointTransform: {fileID: 329587245900630681}
   timeBetweenShots: 0.5
+  idArma: 0
 --- !u!1 &5807537511891669051
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +809,23 @@ Transform:
   - {fileID: 3570853930137376382}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6891202654040139934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282790840016943336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a989fca17f8904baf0b112890b1ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectiles:
+  - {fileID: 385594097134617945, guid: 8778dfe2f07cc5b45a80fdb3fd7ab8ba, type: 3}
+  - {fileID: 2808916586718523140, guid: b4ca7a47fc7af034ca9fcfc064d4c56e, type: 3}
+  - {fileID: 3037578075496036559, guid: f3fd04cd3279f3e4bb49ac105b645d78, type: 3}
+  playerMovement: {fileID: 0}
 --- !u!95 &7124525155628599495
 Animator:
   serializedVersion: 5
