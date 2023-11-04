@@ -16,7 +16,7 @@ public class AimWeapon : MonoBehaviour
     [SerializeField] Animator gunAnimator;
     [SerializeField] Transform gunEndPointTransform;
     
-    void FixedUpdate()
+    void Update()
     {
         HandleAim();
         HandleShooting();
@@ -54,9 +54,9 @@ public class AimWeapon : MonoBehaviour
             gunAnimator.SetTrigger("Shoot");
 
             OnShoot?.Invoke(this, new OnShootEventArgs {
-                    gunEndPointPosition = gunEndPointTransform.position,
-                    shootPosition = mouseWorldPosition,
-                });
+                gunEndPointPosition = gunEndPointTransform.position,
+                shootPosition = mouseWorldPosition,
+            });
         }
     }
 }

@@ -10,14 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forceDamping;
     [SerializeField] Animator characterAnimator;
 
-    [SerializeField] Transform aimTransform;
-    [SerializeField] Transform gunEndPointTransform;
-    [SerializeField] GameObject projectile;
-    [SerializeField] private float bullet_speed;
-    [SerializeField] private float timeBetweenShots;
-    private float nextShotTime;
-
-    // Update is called once per frame
     public void FixedUpdate()
     {
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
@@ -36,12 +28,7 @@ public class PlayerMovement : MonoBehaviour
         else{
             characterAnimator.SetBool("IsMoving", false);
         }
-
-        if(Input.GetMouseButton(0)){
-            Fire();
-        }
     }
-
     private void Fire(){
         if(Time.time > nextShotTime){
                 Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);

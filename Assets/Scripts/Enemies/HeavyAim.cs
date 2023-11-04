@@ -3,18 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAim : MonoBehaviour
+public class HeavyAim : MonoBehaviour
 {
+    private Transform playerTransform;
     [SerializeField] private Transform aimTransform;
     [SerializeField] private Transform characterTransform;
-    [SerializeField] private Transform playerTransform;
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform gunEndPointTransform;
     [SerializeField] private float timeBetweenShots;
+    [SerializeField] private HeavyFollow heavy;
     private float nextShotTime = 0.1f;
+    
+    private void Start(){
+        playerTransform = GameObject.FindWithTag("Player").transform;
+    }
     
     void Update()
     {
+        gunAnimator.SetBool("IsMoving", heavy.moving);
         HandleAim();
         HandleShooting();
     }
@@ -44,7 +50,7 @@ public class EnemyAim : MonoBehaviour
 
     private void HandleShooting()
     {
-        if(Time.time > nextShotTime){
+        if(Time.time > nextShotTime && heavy.moving == false){
             gunAnimator.SetTrigger("Shoot");
             nextShotTime = Time.time + timeBetweenShots;
         }
