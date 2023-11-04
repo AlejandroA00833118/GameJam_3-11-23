@@ -34,16 +34,16 @@ public class PlayerMovement : MonoBehaviour
             characterAnimator.SetBool("IsMoving", false);
         }
 
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButton(0)){
             Fire();
         }
     }
 
     private void Fire(){
         if(Time.time > nextShotTime){
-                Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
-                Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
-                nextShotTime = Time.time + timeBetweenShots;
-            }
+            Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
+            Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
+            nextShotTime = Time.time + timeBetweenShots;
+        }
     }
 }

@@ -11,7 +11,7 @@ public class EnemyAim : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform gunEndPointTransform;
     [SerializeField] private float timeBetweenShots;
-    private float nextShotTime = 0.1f;
+    private float nextShotTime;
     
     private void Start(){
         playerTransform = GameObject.FindWithTag("Player").transform;

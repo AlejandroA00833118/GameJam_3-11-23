@@ -15,8 +15,10 @@ public class AimWeapon : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] Animator gunAnimator;
     [SerializeField] Transform gunEndPointTransform;
+    [SerializeField] private float timeBetweenShots;
+    private float nextShotTime;
     
-    void Update()
+    void FixedUpdate()
     {
         HandleAim();
         HandleShooting();
@@ -50,13 +52,17 @@ public class AimWeapon : MonoBehaviour
         Vector3 mouseWorldPosition = worldCamera.ScreenToWorldPoint(Input.mousePosition);
         mouseWorldPosition.z = 0f;
 
-        if(Input.GetMouseButtonDown(0)){
-            gunAnimator.SetTrigger("Shoot");
+        if(Input.GetMouseButton(0)){
+            if(Time.time > nextShotTime){
+                gunAnimator.SetTrigger("Shoot");
 
-            OnShoot?.Invoke(this, new OnShootEventArgs {
-                gunEndPointPosition = gunEndPointTransform.position,
-                shootPosition = mouseWorldPosition,
-            });
+                OnShoot?.Invoke(this, new OnShootEventArgs {
+                    gunEndPointPosition = gunEndPointTransform.position,
+                    shootPosition = mouseWorldPosition,
+                });
+
+                nextShotTime = Time.time + timeBetweenShots;
+            }
         }
     }
 }

@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  target: {fileID: 0}
   minimumDistance: 6
   enemyAnimator: {fileID: 7554685821375601221}
+  gunEndPointTransform: {fileID: 4889284429224265732}
   projectile: {fileID: 385594097134617945, guid: ed1b4c23e6063f549abad9bcf8823f85, type: 3}
   timeBetweenShots: 1.5
 --- !u!114 &272719937361463345
@@ -131,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimTransform: {fileID: 7656722586663956633}
   characterTransform: {fileID: 286930262653537054}
-  playerTransform: {fileID: 0}
   gunAnimator: {fileID: 9178690667260175482}
   gunEndPointTransform: {fileID: 4889284429224265732}
   timeBetweenShots: 1.5
@@ -262,7 +261,7 @@ Animator:
   m_GameObject: {fileID: 5612173143006549631}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 98cce984722202343bb9269e636a717a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1e21e9412d1df1a4994a0671bd1fcb88, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
