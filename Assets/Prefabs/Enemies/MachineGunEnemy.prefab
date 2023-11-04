@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5356688, y: -0.07044947, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 743780586334843623}
@@ -50,6 +50,7 @@ MonoBehaviour:
   speed: 0.5
   minimumDistance: 5
   enemyAnimator: {fileID: 6553004643748688546}
+  gunEndPointTransform: {fileID: 2740564760793745511}
   projectile: {fileID: 2808916586718523140, guid: b4ca7a47fc7af034ca9fcfc064d4c56e, type: 3}
   timeBetweenShots: 0.25
   moving: 0

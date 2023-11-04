@@ -404,6 +404,7 @@ MonoBehaviour:
   speed: 2
   minimumDistance: 6
   enemyAnimator: {fileID: 2506596283520933533}
+  gunEndPointTransform: {fileID: 7939556893781390613}
   projectile: {fileID: 6363995895618829824, guid: 1482cb5081baa4d48a14f4e4640d63a4, type: 3}
   timeBetweenShots: 3
 --- !u!114 &6799941305418057083
