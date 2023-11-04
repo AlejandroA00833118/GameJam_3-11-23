@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAim : MonoBehaviour
+public class SniperAim : MonoBehaviour
 {
     private Transform playerTransform;
     [SerializeField] private Transform aimTransform;
