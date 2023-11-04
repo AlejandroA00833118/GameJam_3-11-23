@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int weaponId;
+    public PlayerMovement playerMovement;
+    public ProjectileController projectileController;
+    public WeaponControllerAnimator weaponControllerAnimator;
+    public WeaponSprite weaponSprite;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            weaponSprite.ChangeSprite(weaponId);
+            weaponControllerAnimator.ChangeAnimatorController(weaponId);
+            projectileController.ChangeProjectile(weaponId);
+            playerMovement.UpdateWeapon(weaponId);
+
+            Destroy(gameObject);
+        }
     }
 }
