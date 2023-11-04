@@ -44,10 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Fire(){
         if(Time.time > nextShotTime){
-                Instantiate(projectile, gunEndPointTransform.position, Quaternion.identity);
+                Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
                 Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
-                rigidbody.velocity = aimTransform.up * bullet_speed * Time.fixedDeltaTime;
-                Debug.Log(rigidbody.velocity);
 
                 nextShotTime = Time.time + timeBetweenShots;
             }
