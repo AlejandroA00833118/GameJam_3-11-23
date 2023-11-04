@@ -164,10 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199bd5c47fd374b478d1246f9c06af67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 13
   minimumDistance: 5
   enemyAnimator: {fileID: 1999711494158058555}
-  gunEndPointTransform: {fileID: 3727991654435425305}
 --- !u!114 &1464839192356124762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimTransform: {fileID: 7011323435461400473}
   characterTransform: {fileID: 4654515727653550890}
-  gunEndPointTransform: {fileID: 3727991654435425305}
 --- !u!1 &8847257642877411058
 GameObject:
   m_ObjectHideFlags: 0
