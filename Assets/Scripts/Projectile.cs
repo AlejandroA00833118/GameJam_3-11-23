@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float fuerza = 10.0f;
+    public int ataque = 40;
     Rigidbody2D rb;
 
     void Start() {
