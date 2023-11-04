@@ -9,6 +9,7 @@ public class HeavyFollow : MonoBehaviour
     [SerializeField] private float minimumDistance;
     [SerializeField] private Animator enemyAnimator;
 
+    [SerializeField] private Transform gunEndPointTransform;
     [SerializeField] private GameObject projectile;
     [SerializeField] private float timeBetweenShots;
     private float nextShotTime;
@@ -19,7 +20,7 @@ public class HeavyFollow : MonoBehaviour
     }
 
     private void Update()
-    {   
+    {  
         if(Vector2.Distance(transform.position, target.position) > minimumDistance + 0.4f){
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
             enemyAnimator.SetBool("IsMoving", true);
@@ -36,7 +37,7 @@ public class HeavyFollow : MonoBehaviour
         }
 
         if(Time.time > nextShotTime && moving == false){
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
             nextShotTime = Time.time + timeBetweenShots;
         }
     }

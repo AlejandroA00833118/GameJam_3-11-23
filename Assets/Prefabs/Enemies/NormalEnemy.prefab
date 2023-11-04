@@ -115,7 +115,7 @@ MonoBehaviour:
   minimumDistance: 6
   enemyAnimator: {fileID: 7554685821375601221}
   gunEndPointTransform: {fileID: 4889284429224265732}
-  projectile: {fileID: 385594097134617945, guid: ed1b4c23e6063f549abad9bcf8823f85, type: 3}
+  projectile: {fileID: 385594097134617945, guid: 8778dfe2f07cc5b45a80fdb3fd7ab8ba, type: 3}
   timeBetweenShots: 1.5
 --- !u!114 &272719937361463345
 MonoBehaviour:

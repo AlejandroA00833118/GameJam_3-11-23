@@ -9,6 +9,7 @@ public class DemolitionFollow : MonoBehaviour
     [SerializeField] private float minimumDistance;
     [SerializeField] private Animator enemyAnimator;
 
+    [SerializeField] private Transform gunEndPointTransform;
     [SerializeField] private GameObject projectile;
     [SerializeField] private float timeBetweenShots;
     private float nextShotTime;
@@ -20,15 +21,15 @@ public class DemolitionFollow : MonoBehaviour
     private void Update()
     {
         if(Time.time > nextShotTime){
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
             nextShotTime = Time.time + timeBetweenShots;
         }
         
-        if(Vector2.Distance(transform.position, target.position) > minimumDistance + 0.25f){
+        if(Vector2.Distance(transform.position, target.position) > minimumDistance + 0.1f){
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
             enemyAnimator.SetBool("IsMoving", true);
         }
-        else if(Vector2.Distance(transform.position, target.position) < minimumDistance - 0.25f){
+        else if(Vector2.Distance(transform.position, target.position) < minimumDistance - 0.1f){
             transform.position = Vector2.MoveTowards(transform.position, target.position, 0.5f * -speed * Time.fixedDeltaTime);
             enemyAnimator.SetBool("IsMoving", true);
         }
