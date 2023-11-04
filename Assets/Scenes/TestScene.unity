@@ -714,6 +714,9 @@ MonoBehaviour:
   forceToApply: {x: 0, y: 0}
   forceDamping: 1
   characterAnimator: {fileID: 1277457718849575117}
+  projectile: {fileID: 385594097134617945, guid: c082acea40b8913479b12b5a85ccbf34, type: 3}
+  gunEndPointTransform: {fileID: 329587245900630681}
+  timeBetweenShots: 1
 --- !u!1 &5807537511891669051
 GameObject:
   m_ObjectHideFlags: 0
