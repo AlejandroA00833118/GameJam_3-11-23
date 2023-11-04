@@ -323,6 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7662537832083612202}
   - component: {fileID: 972740360830560871}
+  - component: {fileID: 7662537832083612203}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -632,6 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2729974881182393800}
   - component: {fileID: 7124525155628599495}
+  - component: {fileID: 7124525155628599496}
   m_Layer: 0
   m_Name: Aim
   m_TagString: Untagged
@@ -826,6 +828,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7124525155628599496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097068299062194401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73882c238eaa82a47a595896f3cb24b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorControllers:
+  - {fileID: 9100000, guid: 1e21e9412d1df1a4994a0671bd1fcb88, type: 2}
+  - {fileID: 9100000, guid: 98cce984722202343bb9269e636a717a, type: 2}
+  - {fileID: 9100000, guid: 44b8c2a06106a8a49a9d3fcdb5f747d9, type: 2}
 --- !u!4 &7662537832083612202
 Transform:
   m_ObjectHideFlags: 0
@@ -836,11 +854,27 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.11500001, y: -0.01, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7867505222493085158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7662537832083612203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273958323899054834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3791eabf2299f524993826f48ab5aee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -959824357, guid: 371f9cec6ae50ba42aa5237355b82a2a, type: 3}
+  - {fileID: 38880501, guid: 2045359add092174bb809d63f49ea112, type: 3}
+  - {fileID: -1846115396, guid: 2045359add092174bb809d63f49ea112, type: 3}
 --- !u!4 &7867505222493085158
 Transform:
   m_ObjectHideFlags: 0
