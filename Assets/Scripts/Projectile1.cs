@@ -9,9 +9,6 @@ public class Projectile1 : MonoBehaviour
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void FixedUpdate(){
         Vector2 direccion = transform.right;
         rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
     }
