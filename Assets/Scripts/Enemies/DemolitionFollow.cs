@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class DemolitionFollow : MonoBehaviour
 {
     private Transform target;
     [SerializeField] private float speed;
