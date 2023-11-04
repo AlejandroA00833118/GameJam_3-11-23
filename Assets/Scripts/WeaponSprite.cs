@@ -7,7 +7,7 @@ public class WeaponSprite : MonoBehaviour
     public Sprite[] sprites;
 
     void Start() {
-        ChangeSprite(sprites[1]);
+        ChangeSprite(sprites[2]);
     }
     
     void ChangeSprite(Sprite newSprite)

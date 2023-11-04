@@ -7,7 +7,7 @@ public class WeaponControllerAnimator : MonoBehaviour
     public RuntimeAnimatorController[] animatorControllers;
 
     void Start() {
-        ChangeAnimatorController(animatorControllers[1]);
+        ChangeAnimatorController(animatorControllers[2]);
     }
     
     void ChangeAnimatorController(RuntimeAnimatorController newAnimatorController)
