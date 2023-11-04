@@ -10,6 +10,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float forceDamping;
     [SerializeField] Animator characterAnimator;
 
+    [SerializeField] private GameObject projectile;
+    [SerializeField] private Transform gunEndPointTransform;
+    [SerializeField] private float timeBetweenShots;
+    private float nextShotTime;
+
     public void FixedUpdate()
     {
         Vector2 PlayerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
