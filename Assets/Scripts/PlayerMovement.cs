@@ -29,10 +29,12 @@ public class PlayerMovement : MonoBehaviour
             characterAnimator.SetBool("IsMoving", false);
         }
     }
+    private void Fire(){
+        if(Time.time > nextShotTime){
+                Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
+                Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
 
-    void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.tag.Equals("Bullet")){
-            Destroy(col.gameObject);
-        }
+                nextShotTime = Time.time + timeBetweenShots;
+            }
     }
 }
