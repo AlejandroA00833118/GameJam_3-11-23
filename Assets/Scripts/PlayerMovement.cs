@@ -15,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float timeBetweenShots;
     private float nextShotTime;
 
-    public int idArma; //Pistola: 0, Machinegun: 1, Sniper: 2
+    public int idWeapon = 0; //Pistola: 0, Machinegun: 1, Sniper: 2
+    public int[] weaponAmmunition = {10000, 100, 10};
+    private int ammunition = 10000;
+    private float[] attackSpeed = {1f, 0.25f, 3f};
 
     public void FixedUpdate()
     {
