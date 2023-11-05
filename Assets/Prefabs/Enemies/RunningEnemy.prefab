@@ -165,9 +165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199bd5c47fd374b478d1246f9c06af67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 13
+  speed: 7
   minimumDistance: 5
   enemyAnimator: {fileID: 1999711494158058555}
+  detectionDistance: 3
+  followDistance: 10
+  following: 0
 --- !u!114 &1464839192356124762
 MonoBehaviour:
   m_ObjectHideFlags: 0

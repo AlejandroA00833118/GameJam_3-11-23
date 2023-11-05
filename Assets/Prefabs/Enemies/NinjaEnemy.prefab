@@ -217,10 +217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc42e7dbd0771c44cbfe774a6bc9e8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   minimumDistance: 1
   enemyAnimator: {fileID: 5324493060256195561}
   gunEndPointTransform: {fileID: 731940711820514036}
+  detectionDistance: 3
+  followDistance: 10
+  following: 0
+  gun: {fileID: 372186689427576617}
 --- !u!114 &1800286727518474106
 MonoBehaviour:
   m_ObjectHideFlags: 0
