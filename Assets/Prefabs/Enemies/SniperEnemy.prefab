@@ -172,6 +172,10 @@ MonoBehaviour:
   gunEndPointTransform: {fileID: 2069781371706245499}
   projectile: {fileID: 3037578075496036559, guid: f3fd04cd3279f3e4bb49ac105b645d78, type: 3}
   timeBetweenShots: 2
+  detectionDistance: 10
+  followDistance: 15
+  following: 0
+  gun: {fileID: 3000264036617651239}
 --- !u!114 &3187701619115853928
 MonoBehaviour:
   m_ObjectHideFlags: 0

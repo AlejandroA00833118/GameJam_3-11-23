@@ -49,13 +49,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a13719179876db40b8e5b62879fc7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1
   minimumDistance: 5
   enemyAnimator: {fileID: 6553004643748688546}
   gunEndPointTransform: {fileID: 2740564760793745511}
   projectile: {fileID: 2808916586718523140, guid: b4ca7a47fc7af034ca9fcfc064d4c56e, type: 3}
   timeBetweenShots: 0.25
   moving: 0
+  detectionDistance: 5
+  followDistance: 10
+  following: 0
+  gun: {fileID: 6779644937897263580}
 --- !u!114 &2412327934052520965
 MonoBehaviour:
   m_ObjectHideFlags: 0
