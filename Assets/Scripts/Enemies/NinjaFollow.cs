@@ -41,6 +41,7 @@ public class NinjaFollow : MonoBehaviour
         else if(Vector2.Distance(transform.position, target.position) > followDistance && Vector2.Distance(transform.position, target.position) > detectionDistance){
             following = false;
             gun.SetActive(false);
+            enemyAnimator.SetBool("IsMoving", false);
         }
     }
 

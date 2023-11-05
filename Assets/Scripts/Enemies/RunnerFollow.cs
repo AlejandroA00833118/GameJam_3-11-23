@@ -33,6 +33,7 @@ public class RunnerFollow : MonoBehaviour
         }
         else if(Vector2.Distance(transform.position, target.position) > followDistance && Vector2.Distance(transform.position, target.position) > detectionDistance){
             following = false;
+            enemyAnimator.SetBool("IsMoving", false);
         }
         
     }
