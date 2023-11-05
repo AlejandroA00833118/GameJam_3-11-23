@@ -10,6 +10,8 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
     private bool spawned = false;
 
+    public int tileType = -1;
+
     public float waitTime = 4f;
 
     void Start()
@@ -17,31 +19,30 @@ public class RoomSpawner : MonoBehaviour
         Destroy(gameObject, waitTime);
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         Invoke("Spawn", 0.1f);
+
+        if (tileType == -1) {
+            tileType = Random.Range(0, 6);
+        }
     }
 
     void Spawn() {
         if (spawned == false) {
             spawned = true;
-            if (openSide == 1) {
-                rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+            rand = Random.Range(0, templates.tilesRooms[openSide-1][tileType].Length);
+            GameObject newRoom = Instantiate(templates.tilesRooms[openSide-1][tileType][rand], transform.position, templates.tilesRooms[openSide-1][tileType][rand].transform.rotation);
+            RoomSpawner script = newRoom.GetComponentInChildren<RoomSpawner>();
+            rand = Random.Range(0, 100);
+            if (rand < 80) {
+                script.tileType = tileType;
             }
-            else if (openSide == 2) {
-                rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
-            }
-            else if (openSide == 3) {
-                rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
-            }
-            else if (openSide == 4) {
-                rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+            else {
+                script.tileType = Random.Range(0,6);
             }
         }
-        else {
-            Debug.Log("No puedo generar más!");
-        }
+    }
+
+    void spawnRoom() {
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

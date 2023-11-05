@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
+  - Wall
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Enemy_Bullets
   - Player
   - Player_Bullets
-  - 
+  - Destroyer
   - 
   - 
   - 
@@ -42,6 +45,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tiles
+    uniqueID: 1229097783
+    locked: 0
+  - name: Walls
+    uniqueID: 3050936539
     locked: 0
   - name: Pick-ups
     uniqueID: 441620813
