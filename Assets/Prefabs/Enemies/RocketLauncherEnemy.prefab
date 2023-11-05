@@ -158,7 +158,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1132722773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1489981009, guid: 679219f6a567fb34d8abb04c38d374b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -308,7 +308,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2059608561
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1313551319, guid: 2045359add092174bb809d63f49ea112, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 1744499372562952748}
   - component: {fileID: 6410483291394842921}
   - component: {fileID: 6799941305418057083}
+  - component: {fileID: 7624899032902532619}
   m_Layer: 0
   m_Name: RocketLauncherEnemy
   m_TagString: Untagged
@@ -401,12 +402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98993e749179e4949b7e048a93441a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   minimumDistance: 6
   enemyAnimator: {fileID: 2506596283520933533}
   gunEndPointTransform: {fileID: 7939556893781390613}
   projectile: {fileID: 6363995895618829824, guid: 1482cb5081baa4d48a14f4e4640d63a4, type: 3}
   timeBetweenShots: 3
+  detectionDistance: 5
+  followDistance: 10
+  following: 0
+  gun: {fileID: 7473857383884816094}
 --- !u!114 &6799941305418057083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,3 +429,30 @@ MonoBehaviour:
   gunAnimator: {fileID: 4528087483548067591}
   gunEndPointTransform: {fileID: 7939556893781390613}
   timeBetweenShots: 3
+--- !u!50 &7624899032902532619
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669769325495732981}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1132722773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1648883970, guid: 679219f6a567fb34d8abb04c38d374b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 1873244828612881070}
   - component: {fileID: 6570410521600331568}
   - component: {fileID: 3582008645148466912}
+  - component: {fileID: 5664810831458826726}
   m_Layer: 0
   m_Name: ScreamingEnemy
   m_TagString: Untagged
@@ -199,9 +200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199bd5c47fd374b478d1246f9c06af67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 13
+  speed: 8
   minimumDistance: 5
   enemyAnimator: {fileID: 1722673351162236115}
+  detectionDistance: 2
+  followDistance: 10
+  following: 0
 --- !u!114 &3582008645148466912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +220,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimTransform: {fileID: 6798807943965599288}
   characterTransform: {fileID: 5304082213224164634}
+--- !u!50 &5664810831458826726
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110658369590741593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &3852340051268443965
 GameObject:
   m_ObjectHideFlags: 0
