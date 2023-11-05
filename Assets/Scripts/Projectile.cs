@@ -14,6 +14,16 @@ public class Projectile : MonoBehaviour
         rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Ambient")) {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Wall") || other.CompareTag("Bullet")) {
+            Destroy(gameObject);
+        }
+    }
+
     void OnBecameInvisible()
     {
         Destroy(gameObject);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8473041985672964435}
   m_Layer: 0
   m_Name: ExpendingMachine
-  m_TagString: Untagged
+  m_TagString: Ambient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
