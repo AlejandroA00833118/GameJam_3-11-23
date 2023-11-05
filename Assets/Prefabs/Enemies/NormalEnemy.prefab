@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 4607176565069853541}
   - component: {fileID: 272719937361463345}
   - component: {fileID: 3007723303419061621}
-  - component: {fileID: -2335350543005044605}
   m_Layer: 0
   m_Name: NormalEnemy
   m_TagString: Enemy
@@ -94,7 +93,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5356688, y: -0.07044947, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7656722586663956633}
@@ -151,35 +150,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   currentHealth: 100
   maxHealth: 100
---- !u!114 &-2335350543005044605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3225195406370425415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b513a263c7c144fb5c7dc9c4d669d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -738417615, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 591030444, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1293113755, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1842097789, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -365132385, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -2070859089, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 85274163, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1923111482, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1451483425, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1440075249, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -2084071105, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1073629844, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1476521613, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1445632949, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1968554080, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1362456386, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
 --- !u!1 &5061127325985645347
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +300,7 @@ GameObject:
   - component: {fileID: 2993833385727121953}
   - component: {fileID: 7554685821375601221}
   - component: {fileID: 3232860696748626756}
+  - component: {fileID: 8684103582012928908}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
@@ -470,3 +441,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.171875, y: 0.296875}
   m_EdgeRadius: 0
+--- !u!114 &8684103582012928908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987774178653180291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b513a263c7c144fb5c7dc9c4d669d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -738417615, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 591030444, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1293113755, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1842097789, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -365132385, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2070859089, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 85274163, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1923111482, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1451483425, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1440075249, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2084071105, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1073629844, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1476521613, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1445632949, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1968554080, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1362456386, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}

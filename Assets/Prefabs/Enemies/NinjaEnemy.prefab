@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 4089426105938535322}
   - component: {fileID: 1800286727518474106}
   - component: {fileID: -9021832389878582270}
-  - component: {fileID: 611981681982842888}
   m_Layer: 0
   m_Name: NinjaEnemy
   m_TagString: Enemy
@@ -199,7 +198,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5356688, y: -0.07044947, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4259161704121462238}
@@ -254,35 +253,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   currentHealth: 125
   maxHealth: 125
---- !u!114 &611981681982842888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6158315270081277066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b513a263c7c144fb5c7dc9c4d669d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: -738417615, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 591030444, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1293113755, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1842097789, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -365132385, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -2070859089, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 85274163, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1923111482, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1451483425, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -1440075249, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: -2084071105, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1073629844, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1476521613, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1445632949, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1968554080, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
-  - {fileID: 1362456386, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
 --- !u!1 &7158191347248592179
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +298,7 @@ GameObject:
   - component: {fileID: 462437809558931327}
   - component: {fileID: 5324493060256195561}
   - component: {fileID: 640724381189583538}
+  - component: {fileID: 6397610187667480399}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Enemy
@@ -459,7 +430,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.171875, y: 0.296875}
+    oldSize: {x: 0.55, y: 0.95}
     newSize: {x: 0.171875, y: 0.296875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -468,3 +439,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.171875, y: 0.296875}
   m_EdgeRadius: 0
+--- !u!114 &6397610187667480399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166560002589459052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b513a263c7c144fb5c7dc9c4d669d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -738417615, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 591030444, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1293113755, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1842097789, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -365132385, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2070859089, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 85274163, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1923111482, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1451483425, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1440075249, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2084071105, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1073629844, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1476521613, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1445632949, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1968554080, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1362456386, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
