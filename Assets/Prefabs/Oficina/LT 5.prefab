@@ -2903,6 +2903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 139110020868473943}
   - component: {fileID: -6034893455040794727}
+  - component: {fileID: -2961140092459306191}
   m_Layer: 0
   m_Name: LT 5
   m_TagString: Untagged
@@ -2941,6 +2942,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e832307cf7f4946ba1ef458d22a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2961140092459306191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209836582688232189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd53e31ecf091ad4c992d439c1110ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  props:
+  - {fileID: 6427455745852961152, guid: 197e5e0d316c51343ae82e9e6287515d, type: 3}
+  - {fileID: 3636572840681048104, guid: 4e88d41dcc377214cb1b612b3923648b, type: 3}
+  - {fileID: 3831999865680060858, guid: 10b60a63e7c62da4f9f07387a00ad3bf, type: 3}
+  - {fileID: 5289027636572961916, guid: 22ccd22b5be888241a5a489b3b19ab1c, type: 3}
+  - {fileID: 658721833919713035, guid: 4ad0dd4623cadcf4f81ed720f05536a4, type: 3}
+  - {fileID: 8290223124366255110, guid: dcd4a5a9922eb1940884904122a5692d, type: 3}
+  - {fileID: 7318773049357740410, guid: 3b799ef6e728dd342aabac8984dbf724, type: 3}
+  - {fileID: 9912676028674638, guid: 38a9a9f0fb0e8bd4fa5bee14249a7c5b, type: 3}
+  - {fileID: 7908362467609599614, guid: 4446f5a4b7d1dec4583f70a9a9f0dfdb, type: 3}
+  - {fileID: 8094151063917968657, guid: d69cbe7f3ceeaab4c82b8b52a7328eee, type: 3}
+  - {fileID: 8632774480295857398, guid: d551e5cb2e1af4a439d2c6df6fee5798, type: 3}
+  - {fileID: 6285886931860885188, guid: 2c7eff655d129f74680bc815a9e5071c, type: 3}
+  - {fileID: 3110116972828194223, guid: bb06ea31fccc3fb4caaf0ac266d11542, type: 3}
+  - {fileID: 8009785716153026505, guid: 045c780f5ace47148b03041291164c32, type: 3}
+  - {fileID: 3098031230313034643, guid: dd69c7293da226f4dae2d725015af4ac, type: 3}
+  - {fileID: 6129215681498501955, guid: 96b04e0959a9e3c479290b056cf8b469, type: 3}
+  propsMaxItems: 10
+  waitTime: 4
 --- !u!1001 &3558064743771094936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2949,6 +2981,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 139110020868473943}
     m_Modifications:
+    - target: {fileID: -1118098064952472329, guid: 922387f6a2c8b3844af6665ea756946a, type: 3}
+      propertyPath: propsMaxItems
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -1118098064952472329, guid: 922387f6a2c8b3844af6665ea756946a, type: 3}
+      propertyPath: props.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4091411037127072014, guid: 922387f6a2c8b3844af6665ea756946a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
