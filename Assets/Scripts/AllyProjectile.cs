@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class AllyProjectile : MonoBehaviour
 {
     public float force = 10.0f;
     public int attack = 40;
@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Enemy")) {
             other.GetComponent<Health>().ReceiveDamage(attack);
         }
     }
