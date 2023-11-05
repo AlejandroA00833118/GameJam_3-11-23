@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2059608561
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1846115396, guid: 2045359add092174bb809d63f49ea112, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,9 +128,11 @@ GameObject:
   - component: {fileID: 4675174606361571252}
   - component: {fileID: 6386551390714501614}
   - component: {fileID: 3187701619115853928}
+  - component: {fileID: 2666698794243169021}
+  - component: {fileID: -1378661935830455953}
   m_Layer: 0
   m_Name: SniperEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,6 +189,50 @@ MonoBehaviour:
   gunAnimator: {fileID: 4078191644165533605}
   gunEndPointTransform: {fileID: 2069781371706245499}
   timeBetweenShots: 2
+--- !u!114 &2666698794243169021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158984097620033184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2152add57aa4a24492abe956c0cda03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  currentHealth: 75
+  maxHealth: 75
+--- !u!114 &-1378661935830455953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3158984097620033184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b513a263c7c144fb5c7dc9c4d669d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -738417615, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 591030444, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1293113755, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1842097789, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -365132385, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2070859089, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 85274163, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1923111482, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1451483425, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -1440075249, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: -2084071105, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1073629844, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1476521613, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1445632949, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1968554080, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
+  - {fileID: 1362456386, guid: 7a629f6138e353243a9db11fb37a9193, type: 3}
 --- !u!1 &3607740713235183701
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +391,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1132722773
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1099344938, guid: 679219f6a567fb34d8abb04c38d374b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

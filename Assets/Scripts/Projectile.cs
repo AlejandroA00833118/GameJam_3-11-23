@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float fuerza = 10.0f;
-    public int ataque = 40;
+    public float force = 10.0f;
+    public int attack = 40;
     Rigidbody2D rb;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         Vector2 direccion = transform.right;
-        rb.AddForce(direccion * fuerza, ForceMode2D.Impulse);
+        rb.AddForce(direccion * force, ForceMode2D.Impulse);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -20,8 +20,12 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Wall")) {
+        if (other.CompareTag("Wall") || other.CompareTag("Bullet")) {
             Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Player")) {
+            other.GetComponent<Health>().ReceiveDamage(attack);
         }
     }
 
