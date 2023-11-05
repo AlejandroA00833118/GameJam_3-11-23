@@ -19,8 +19,7 @@ public class Projectile : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
-
-        if (other.CompareTag("Wall")) {
+        if (other.CompareTag("Wall") || other.CompareTag("Bullet")) {
             Destroy(gameObject);
         }
     }
