@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 465777440129222781}
   - component: {fileID: -8761042646086567211}
   - component: {fileID: 9161311172586614801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BalaSniper
   m_TagString: Bullet
   m_Icon: {fileID: 0}
