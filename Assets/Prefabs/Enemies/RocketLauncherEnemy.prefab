@@ -293,8 +293,8 @@ Transform:
   m_GameObject: {fileID: 7473857383884816094}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0.25, y: 0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6867397702231019362}
@@ -438,8 +438,8 @@ MonoBehaviour:
   enemyAnimator: {fileID: 2506596283520933533}
   gunEndPointTransform: {fileID: 7939556893781390613}
   projectile: {fileID: 6363995895618829824, guid: 1482cb5081baa4d48a14f4e4640d63a4, type: 3}
-  timeBetweenShots: 3
-  detectionDistance: 5
+  timeBetweenShots: 5
+  detectionDistance: 10
   followDistance: 10
   following: 0
   gun: {fileID: 7473857383884816094}
