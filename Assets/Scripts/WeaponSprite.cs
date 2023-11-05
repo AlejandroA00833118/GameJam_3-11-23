@@ -5,15 +5,11 @@ using UnityEngine;
 public class WeaponSprite : MonoBehaviour
 {
     public Sprite[] sprites;
-
-    void Start() {
-        ChangeSprite(sprites[2]);
-    }
     
-    void ChangeSprite(Sprite newSprite)
-    {
+    public void ChangeSprite(int index) {
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        Sprite newSprite = sprites[index];
+
         if (spriteRenderer != null && newSprite != null)
         {
             spriteRenderer.sprite = newSprite;

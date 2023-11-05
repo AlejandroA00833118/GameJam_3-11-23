@@ -5,14 +5,11 @@ using UnityEngine;
 public class WeaponControllerAnimator : MonoBehaviour
 {
     public RuntimeAnimatorController[] animatorControllers;
-
-    void Start() {
-        ChangeAnimatorController(animatorControllers[2]);
-    }
     
-    void ChangeAnimatorController(RuntimeAnimatorController newAnimatorController)
+    public void ChangeAnimatorController(int index)
     {
         Animator animator = GetComponent<Animator>();
+        RuntimeAnimatorController newAnimatorController = animatorControllers[index];
         
         if (animator != null && newAnimatorController != null)
         {

@@ -15,10 +15,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float timeBetweenShots;
     private float nextShotTime;
 
+    public ProjectileController projectileController;
+    public WeaponControllerAnimator weaponControllerAnimator;
+    public WeaponSprite weaponSprite;
+
     public int idWeapon = 0; //Pistola: 0, Machinegun: 1, Sniper: 2
     public int[] weaponAmmunition = {10000, 100, 10};
     private int ammunition = 10000;
-    private float[] attackSpeed = {1f, 0.25f, 3f};
+    private float[] weaponAttackSpeed = {1f, 0.25f, 3f};
 
     public void FixedUpdate()
     {
@@ -44,11 +48,26 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void UpdateWeapon(int index) {
+        idWeapon = index;
+        ammunition = weaponAmmunition[index];
+        timeBetweenShots = weaponAttackSpeed[index];
+    }
+
     private void Fire(){
-        if(Time.time > nextShotTime){
-            Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
-            Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
-            nextShotTime = Time.time + timeBetweenShots;
+        if (Time.time > nextShotTime) {
+            if (ammunition > 0) {
+                Instantiate(projectile, gunEndPointTransform.position, gunEndPointTransform.rotation);
+                ammunition -= 1;
+                Rigidbody2D rigidbody = projectile.GetComponent<Rigidbody2D>();
+                nextShotTime = Time.time + timeBetweenShots;
+            }
+            else {
+                weaponSprite.ChangeSprite(0);
+                weaponControllerAnimator.ChangeAnimatorController(0);
+                projectileController.ChangeProjectile(0);
+                UpdateWeapon(0);
+            }
         }
     }
 }
