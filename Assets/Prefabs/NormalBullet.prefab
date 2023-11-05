@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1076130224973639719}
   - component: {fileID: 3141787303283850350}
   - component: {fileID: 1950699941025032175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NormalBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuerza: 15
+  ataque: 40
 --- !u!212 &1950699941025032175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -159,7 +160,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2059608561
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1630740564, guid: 3ff8299f3b0e64441b43294ad9b620f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

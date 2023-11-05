@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6608873296247998092}
   - component: {fileID: -6774890330968199126}
   - component: {fileID: 4397433553826990247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BalaMetralleta
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2059608561
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1672544630, guid: 3ff8299f3b0e64441b43294ad9b620f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
